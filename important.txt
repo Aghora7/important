@@ -17,3 +17,7 @@ For pushing large file sizes
 >>>git config --global http.postBuffer 157286400
 >>>git push -u <url> HEAD~20000:refs/head/branch
 >>>git push --set-upstream origin ten
+
+For Merging Android Security patches
+>>>git fetch aosp_repo tag_name
+>>>git merge FETCH_HEAD
