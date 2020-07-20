@@ -1,0 +1,19 @@
+how to cherry-pick merge commit
+>>>git cherry-pick -m 2 -e d0897a12374faf23a6ffac22682690f6683e5963
+
+how to reset commits to certain time
+>>>git reset --hard $(git rev-list -1 $(git rev-parse --until=2020-04-10) ten)
+
+After git Merge Commit chnage authorship
+>>>git -c user.name=Aghora7 -c user.email=ukikieran@gmail.com commit --amend --$
+
+For adding Author to already pushed commits
+>>>git commit --amend --author="xyyx <xyyx@mail.ru>"
+>>>git push --force-with-lease
+
+For pushing large file sizes
+>>>git reflog expire --all --expire=now
+>>>git gc --prune=now --aggressive
+>>>git config --global http.postBuffer 157286400
+>>>git push -u <url> HEAD~20000:refs/head/branch
+>>>git push --set-upstream origin ten
