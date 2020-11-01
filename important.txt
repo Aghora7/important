@@ -39,3 +39,19 @@ git add .
 git cherry-pick --continue
 8. Now push it
 git push
+
+
+How to CAF tag kernel
+1. clone kernel tree first 
+2. git fetch git fetch https://source.codeaurora.org/quic/la/kernel/msm-4.9/ LA.UM.7.6.2.r2-02300-89xx.0
+here msm-4.9 is kernel base address to check use this command "make kernel version"
+source link:- https://source.codeaurora.org/quic/la/kernel/msm-4.9/
+WIKI page link:- https://wiki.codeaurora.org/xwiki/bin/QAEP/release
+in wiki page you can find tags
+3. git merge FETCH_HEAD
+4. if you get any errors or conflicts fix it
+5. git add .
+6. git merge --continue
+7. Now push it
+git push
+
