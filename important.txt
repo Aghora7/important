@@ -21,3 +21,21 @@ For pushing large file sizes
 For Merging Android Security patches
 >>>git fetch aosp_repo tag_name
 >>>git merge FETCH_HEAD
+
+
+How to kernel upstream
+1. Clone kernel tree first
+2. Then add remote
+git remote add enter https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
+3. Then fetch it & wait it takes some time
+git fetch enter
+4. To check kernel version
+make kernelversion
+5. Based on your kernel version example(4.9.112) use that number
+git cherry-pick v4.9.112..v4.9.113
+6. fix errors
+7. after fixing errors 
+git add .
+git cherry-pick --continue
+8. Now push it
+git push
