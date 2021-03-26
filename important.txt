@@ -22,6 +22,10 @@ For Merging Android Security patches
 >>>git fetch aosp_repo tag_name
 >>>git merge FETCH_HEAD
 
+For Deleting branches
+1. git branch -m <new_name>
+2. git push origin -u <new_name>
+3. git push origin --delete <old_name> if you get any error change defalut branch in github page
 
 How to kernel upstream
 1. Clone kernel tree first
