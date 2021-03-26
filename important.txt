@@ -22,6 +22,9 @@ For Merging Android Security patches
 >>>git fetch aosp_repo tag_name
 >>>git merge FETCH_HEAD
 
+For Changing Default CodeEditor
+1.git config --global core.editor nano
+
 For Deleting branches
 1. git branch -m <new_name>
 2. git push origin -u <new_name>
