@@ -12,6 +12,7 @@ For adding Author to already pushed commits
 >>>git push --force-with-lease
 
 For pushing large file sizes
+>>>java -jar bfg.jar --strip-blobs-bigger-than 100M some-big-repo.git
 >>>git reflog expire --all --expire=now
 >>>git gc --prune=now --aggressive
 >>>git config --global http.postBuffer 157286400
