@@ -23,6 +23,10 @@ For Merging Android Security patches
 >>>git fetch aosp_repo tag_name
 >>>git merge FETCH_HEAD
 
+For Fixing Merge Conflicts from aosp_repo side all at once
+>>>git checkout --theirs .
+>>>git add .
+
 For Changing Default CodeEditor
 1.git config --global core.editor nano
 
