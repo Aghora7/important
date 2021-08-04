@@ -67,3 +67,6 @@ in wiki page you can find tags
 7. Now push it
 git push
 
+Merge large number of commits when working on large projects automatically
+1. git fetch <repo> tag or branch
+2. git merge -s recursive -X theirs FETCH_HEAD
