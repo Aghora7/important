@@ -70,3 +70,12 @@ git push
 Merge large number of commits when working on large projects automatically
 1. git fetch <repo> tag or branch
 2. git merge -s recursive -X theirs FETCH_HEAD
+
+Jenkins HOME directory change
+1.sudo service jenkins stop
+2.sudo mkdir ~/jenkins
+3.sudo cp -rvf /varlib/jenkins/* ~/jenkins
+4.export JENKINS_HOME=~/jenkins
+5.sudo nano ~/.bash_profile
+  here write "export JENKINS_HOME=~/jenkins"
+6.sudo service jenkins restart
