@@ -79,3 +79,10 @@ Jenkins HOME directory change
 5.sudo nano ~/.bash_profile
   here write "export JENKINS_HOME=~/jenkins"
 6.sudo service jenkins restart
+
+For authenticating github in linux without entering details multiple time
+1.curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+2.echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+3.sudo apt update
+4.sudo apt install gh
+5.gh auth login
