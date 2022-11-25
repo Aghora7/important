@@ -86,3 +86,7 @@ For authenticating github in linux without entering details multiple time
 3.sudo apt update
 4.sudo apt install gh
 5.gh auth login
+
+
+For downloading all URLs in a github organization per page limit is 100
+https://api.github.com/search/repositories?q=lessaosp in:name,description+org:{lessaosp}&per_page=100
