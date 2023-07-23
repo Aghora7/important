@@ -1,0 +1,15 @@
+allow init sysfs:file { open };
+allow init device:chr_file { read write };
+allow init device:chr_file { open };
+allow init device:chr_file { ioctl };
+allow init hal_fingerprint_default:process { ptrace };
+binder_call(system_suspend, init)
+allow init vndbinder_device:chr_file { ioctl };
+allow init self:netlink_socket { write };
+allow init self:netlink_socket { read };
+allow init socket_device:sock_file { write };
+allow init vendor_file:file { execute };
+allow init vendor_file:file { execute_no_trans };
+allow init same_process_hal_file:file { execute };
+allow init device:chr_file { read };
+allow init device:chr_file { write };

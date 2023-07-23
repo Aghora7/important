@@ -1,0 +1,2 @@
+allow bootanim proc:file { ioctl };
+allow bootanim device:chr_file { ioctl };

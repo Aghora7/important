@@ -1,0 +1,10 @@
+allow kernel system_file:file { execute_no_trans };
+allow kernel self:capability { setgid };
+allow kernel vendor_default_prop:file { map };
+binder_call(system_suspend, kernel)
+allow kernel self:capability { sys_ptrace };
+allow kernel init:file { read };
+allow kernel init:dir { search };
+allow kernel init:file { open };
+allow kernel init:file { getattr };
+allow kernel init:unix_stream_socket { connectto };
